@@ -13,6 +13,8 @@
 		F3D012F82592866B006903AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D012E32592866A006903AC /* ContentView.swift */; };
 		F3D012F92592866B006903AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D012E42592866B006903AC /* Assets.xcassets */; };
 		F3D012FA2592866B006903AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D012E42592866B006903AC /* Assets.xcassets */; };
+		F3D013062593FB6A006903AC /* PaperCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D013052593FB6A006903AC /* PaperCalc.swift */; };
+		F3D013072593FB6A006903AC /* PaperCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D013052593FB6A006903AC /* PaperCalc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		F3D012F12592866B006903AC /* Wrapping Paper Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wrapping Paper Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D012F32592866B006903AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D012F42592866B006903AC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F3D013052593FB6A006903AC /* PaperCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperCalc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			children = (
 				F3D012E22592866A006903AC /* Wrapping_Paper_CalculatorApp.swift */,
 				F3D012E32592866A006903AC /* ContentView.swift */,
+				F3D013052593FB6A006903AC /* PaperCalc.swift */,
 				F3D012E42592866B006903AC /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D013062593FB6A006903AC /* PaperCalc.swift in Sources */,
 				F3D012F72592866B006903AC /* ContentView.swift in Sources */,
 				F3D012F52592866B006903AC /* Wrapping_Paper_CalculatorApp.swift in Sources */,
 			);
@@ -196,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D013072593FB6A006903AC /* PaperCalc.swift in Sources */,
 				F3D012F82592866B006903AC /* ContentView.swift in Sources */,
 				F3D012F62592866B006903AC /* Wrapping_Paper_CalculatorApp.swift in Sources */,
 			);
