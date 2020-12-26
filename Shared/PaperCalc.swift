@@ -12,58 +12,43 @@ class PaperCalc: ObservableObject {
     
     @Published var paperLength : String = ""
     @Published var paperWidth : String = ""
-    
-    init() {
-        self.isCM = UserDefaults.standard.object(forKey: "isCM") as? Bool ?? false
-        self.length = UserDefaults.standard.object(forKey: "length") as? String ?? "10.0"
-        self.width = UserDefaults.standard.object(forKey: "width") as? String ?? "10.0"
-        self.height = UserDefaults.standard.object(forKey: "height") as? String ?? "10.0"
-    }
-    
-    @Published var isCM : Bool {
+    @AppStorage("isCM") var isCM = false {
         didSet{
-            UserDefaults.standard.set(isCM, forKey: "isCM")
             calcPaperSize()
         }
     }
-    
-    @Published var height : String{
+    @AppStorage("height") var height = "10.0" {
         didSet {
             guard (height.doubleValue != nil) else {
                 height = oldValue
                 return
             }
-            UserDefaults.standard.set(height, forKey: "height")
             calcPaperSize()
         }
     }
-    
-    @Published var length : String {
-        didSet {
-            guard (length.doubleValue != nil) else {
-                length = oldValue
-                return
-            }
-            UserDefaults.standard.set(length, forKey: "length")
-            calcPaperSize()
-        }
-    }
-    
-    @Published var width : String {
+    @AppStorage("width") var width = "20.0" {
         didSet {
             guard (width.doubleValue != nil) else {
                 width = oldValue
                 return
             }
-            UserDefaults.standard.set(width, forKey: "width")
+            calcPaperSize()
+        }
+    }
+    @AppStorage("length") var length = "30.0" {
+        didSet {
+            guard (length.doubleValue != nil) else {
+                length = oldValue
+                return
+            }
             calcPaperSize()
         }
     }
     
     func calcPaperSize(){
-        let w = (width as NSString).doubleValue
-        let h = (height as NSString).doubleValue
-        let l = (length as NSString).doubleValue
+        let w = Double(width) ?? 0.0
+        let h = Double(height) ?? 0.0
+        let l = Double(length) ?? 0.0
         paperLength = "\((2 * w) + (2 * h) + (isCM ? 5 : 2))"
         paperWidth = "\((h * 1.5) + l)"
     }

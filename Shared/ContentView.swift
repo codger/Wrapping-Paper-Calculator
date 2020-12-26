@@ -21,8 +21,10 @@ struct ContentView: View {
                 }
                 Divider()
                 Button(action: { self.hideKeyboard()}, label: {
-                    Image(systemName: "keyboard.chevron.compact.down")
-                }).scaleEffect(2.0)
+                    Image(systemName: "keyboard.chevron.compact.down")                        
+                        .font(.largeTitle)
+                        
+                })
                 .padding()
             }
             Section{
