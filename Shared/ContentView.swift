@@ -15,6 +15,7 @@ struct ContentView: View {
             Text("Package Wrapper Calculator")
                 .font(.headline)
                 .fontWeight(.bold)
+            Link("Inspiration Video", destination: URL(string: "https://gizmodo.com/i-desperately-need-this-lego-machine-that-measures-pres-1845927829")!)
             HStack{
                 Toggle(isOn: $paperCalc.isCM) {
                     Text(paperCalc.isCM ? "Units CM" : "Units Inch")
